@@ -1,9 +1,13 @@
+package demo;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import demo.pojo.TestAO;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
+import java.util.UUID;
 
 @SpringBootTest
 class JavaTestApplicationTests {
@@ -84,6 +88,16 @@ class JavaTestApplicationTests {
              System.out.println("swim");
         };
         s.swim();
+
+        System.out.println(UUID.randomUUID());
+    }
+
+    @Test
+    public void testLocalDateTime(){
+        String date = "2024-05-23 15:15:13";
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        LocalDateTime dateTime = LocalDateTime.parse(date, formatter);
+        System.out.println(dateTime);
     }
 
     @FunctionalInterface
