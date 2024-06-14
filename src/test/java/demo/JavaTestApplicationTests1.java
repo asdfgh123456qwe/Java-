@@ -14,8 +14,6 @@ class JavaTestApplicationTests1 {
 
     @Test
     public void testLambda(){
-
-
         System.out.println(UUID.randomUUID());
     }
 
