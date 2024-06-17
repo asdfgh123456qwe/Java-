@@ -12,6 +12,11 @@ class JavaTestApplicationTests1 {
      * 算法练习
      */
 
+    public static void main(String[] args) {
+        System.out.println(testRegex("05964866"));
+        System.out.println(testRegex1("665488546"));
+    }
+
 
     // 冒泡排序
     @Test
@@ -73,4 +78,32 @@ class JavaTestApplicationTests1 {
         }
     }
 
+    // 正则表达式
+    public static boolean testRegex(String qq){
+        if(qq == null || qq.startsWith("0") || qq.length() > 20 || qq.length() < 6){
+            return false;
+        }
+
+        for (int i = 0; i < qq.length(); i++) {
+            char ch = qq.charAt(i);
+            if (ch < '0' || ch > '9'){
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    // 正则表达式
+    public static boolean testRegex1(String qq){
+        return qq != null && qq.matches("[1-9]\\d{5,19}");
+    }
+
+    // 正则表达式
+    @Test
+    public void testRegex2(){
+        String email = "1090247102@qq.com";
+        String reg = "\\w{2,}@\\w{2,20}(\\.\\w{2,10}){1,2}";
+        System.out.println(email.matches(reg));
+    }
 }
