@@ -3,7 +3,7 @@ package demo.controller;
 import demo.exception.AgeIllegalRunTimeException;
 
 /**
- * 测试异常Controller
+ * 测试运行时异常Controller
  *
  * @author LENOVO
  * @since 2024/6/19 10:50

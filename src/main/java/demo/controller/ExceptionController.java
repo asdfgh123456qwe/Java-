@@ -4,7 +4,7 @@ import demo.exception.AgeIllegalException;
 import demo.exception.AgeIllegalRunTimeException;
 
 /**
- * 测试异常Controller
+ * 测试编译时异常Controller
  *
  * @author LENOVO
  * @since 2024/6/19 10:50
