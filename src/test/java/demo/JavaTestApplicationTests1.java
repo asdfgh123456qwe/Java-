@@ -1,5 +1,6 @@
 package demo;
 
+import demo.exception.AgeIllegalRunTimeException;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -105,5 +106,5 @@ class JavaTestApplicationTests1 {
         String email = "1090247102@qq.com";
         String reg = "\\w{2,}@\\w{2,20}(\\.\\w{2,10}){1,2}";
         System.out.println(email.matches(reg));
-    }
-}
+}    }
+
