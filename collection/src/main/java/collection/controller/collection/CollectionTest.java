@@ -1,4 +1,4 @@
-package collection.controller;
+package collection.controller.collection;
 
 import java.util.*;
 import java.util.function.Consumer;

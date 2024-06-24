@@ -1,10 +1,9 @@
-package collection.controller;
+package collection.controller.collection;
 
 import collection.pojo.Movie;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.List;
 
 /**
  * 完成电影信息展示
