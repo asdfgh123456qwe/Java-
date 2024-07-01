@@ -2,6 +2,7 @@ package collection.controller.set;
 
 import collection.pojo.Student;
 
+import java.util.Comparator;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.TreeSet;
@@ -36,13 +37,19 @@ public class HashSetTest {
 //
 //        System.out.println(students);
 
-        Set<Integer> set = new TreeSet<>();
-        set.add(77);
-        set.add(22);
-        set.add(66);
-        set.add(22);
-        set.add(66);
+//        Set<Integer> set = new TreeSet<>();
+//        set.add(77);
+//        set.add(22);
+//        set.add(66);
+//        set.add(22);
+//        set.add(66);
 
+        Set<Student> set = new TreeSet<>((o1, o2) -> Double.compare(o1.getAge(), o2.getAge()));
+        set.add(new Student("张三", 25, '男'));
+        set.add(new Student("lisi", 27, '男'));
+        set.add(new Student("ggh", 18, '女'));
+        set.add(new Student("wwr", 52, '男'));
         System.out.println(set);
+
     }
 }
